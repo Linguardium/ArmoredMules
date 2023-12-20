@@ -1,4 +1,4 @@
-package mod.template.mixinonlytemplate.mixin.client;
+package mod.linguardium.armoredmules.mixin.client;
 
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
