@@ -1,13 +1,14 @@
 {
-	"required": true,
-	"package": "mod.linguardium.armoredmules.mixin",
-	"plugin": "mod.linguardium.armoredmules.mixin.CommonMixinPlugin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"MuleMixin",
-		"parents.AbstractHorseEntityMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "mod.linguardium.armoredmules.mixin",
+  "plugin": "mod.linguardium.armoredmules.mixin.CommonMixinPlugin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "HorseEntityAccessor",
+    "MuleMixin",
+    "parents.AbstractHorseEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

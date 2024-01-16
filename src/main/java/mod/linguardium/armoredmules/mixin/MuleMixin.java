@@ -2,7 +2,6 @@ package mod.linguardium.armoredmules.mixin;
 
 import mod.linguardium.armoredmules.mixin.parents.AbstractHorseEntityMixin;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.MuleEntity;
 import net.minecraft.item.HorseArmorItem;
@@ -51,9 +50,12 @@ public abstract class MuleMixin extends AbstractHorseEntityMixin {
                 this.items.setStack(1, itemStack);
             }
         }
-        ItemStack armorSlotStack = items.getStack(1);
-        if (!armorSlotStack.isEmpty() && isHorseArmor(armorSlotStack)) {
-            equipStack(EquipmentSlot.CHEST,armorSlotStack);
-        }
+        updateSaddle();
     }
+
+    @Override
+    protected void ArmoredMules$updateSaddle(CallbackInfo cir) {
+        this.ArmoredMules$setArmorTypeFromStack(this.items.getStack(1));
+    }
+
 }
